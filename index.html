@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4 Week Biz Pawa Up Challenge — Marketing FM · Karl Mutua</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FFFFFF;
+  --off:#FAFAF8;
+  --purple-deep:#231579;
+  --purple-mid:#4A3DB5;
+  --purple-light:#F3F1FF;
+  --text:#111;
+  --muted:#555;
+  --rule:rgba(17,17,17,.12);
+  --rule-purple:rgba(255,255,255,.15);
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.5rem;border-bottom:1.5px solid var(--text);background:var(--white);position:sticky;top:0;z-index:10}
+.nav-brand{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.04em}
+.nav-wa{font-size:.78rem;font-weight:600;text-decoration:none;color:var(--white);background:var(--purple-deep);padding:.45rem 1rem;letter-spacing:.06em;transition:opacity .15s}
+.nav-wa:hover{opacity:.8}
+
+/* WRAP */
+.wrap{max-width:660px;margin:0 auto}
+
+/* HERO — deep purple */
+.hero{background:var(--purple-deep);color:var(--white);padding:2.8rem 1.5rem 2.5rem}
+.hero-spots{display:flex;align-items:baseline;gap:.5rem;margin-bottom:1rem}
+.spots-num{font-family:'Syne',sans-serif;font-size:clamp(5.5rem,20vw,8.5rem);font-weight:800;line-height:.85;color:rgba(255,255,255,.15);letter-spacing:-.03em}
+.spots-label{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500;padding-bottom:.4rem}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(1.75rem,5.5vw,2.65rem);font-weight:800;line-height:1.1;margin-bottom:1rem}
+.hero-programme{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);display:inline-block;padding:.35rem .85rem;margin-bottom:.9rem}
+.hero-promise{font-size:.97rem;color:rgba(255,255,255,.75);max-width:520px;margin-bottom:.8rem;line-height:1.75;font-weight:300}
+.spots-callout{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:.45rem 1rem;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-bottom:1.6rem}
+.btn-row{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn-white{display:inline-block;background:var(--white);color:var(--purple-deep);text-decoration:none;padding:.8rem 1.7rem;font-size:.85rem;font-weight:700;letter-spacing:.04em;transition:opacity .15s}
+.btn-white:hover{opacity:.88}
+.btn-ghost{display:inline-block;border:1.5px solid rgba(255,255,255,.45);color:var(--white);text-decoration:none;padding:.8rem 1.7rem;font-size:.85rem;font-weight:500;letter-spacing:.04em;transition:border-color .15s}
+.btn-ghost:hover{border-color:var(--white)}
+
+/* SECTION */
+section{padding:2.4rem 1.5rem;border-bottom:1.5px solid var(--rule)}
+.label{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:#aaa;margin-bottom:1rem;font-weight:500}
+h2{font-family:'Syne',sans-serif;font-size:clamp(1.3rem,4vw,1.8rem);font-weight:700;line-height:1.16;margin-bottom:1.2rem}
+.body-text{font-size:.95rem;color:var(--muted);line-height:1.75;margin-bottom:1.1rem;font-weight:300}
+
+/* WORKS BEST FOR */
+.for-section-label{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--purple-deep);margin-bottom:1.1rem;padding:.75rem 1rem;background:var(--purple-light);border-left:4px solid var(--purple-deep)}
+.for-list{list-style:none;margin-top:.2rem}
+.for-list li{display:flex;align-items:flex-start;gap:1rem;padding:.95rem 0;border-bottom:1px solid var(--rule);font-size:1rem;line-height:1.5;color:var(--text);font-weight:500}
+.for-list li:last-child{border-bottom:none}
+.for-mark{width:22px;height:22px;background:var(--purple-deep);color:var(--white);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15rem;font-size:.7rem;font-weight:800;border-radius:2px}
+
+/* WEEKS — card style */
+.weeks{list-style:none;margin-top:1.1rem;display:grid;gap:.75rem}
+.weeks li{display:grid;grid-template-columns:auto 1fr;gap:0;border:1.5px solid var(--rule);overflow:hidden}
+.wk-num{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--white);background:var(--purple-deep);line-height:1;letter-spacing:-.04em;padding:.9rem 1rem;display:flex;align-items:flex-start;min-width:3.2rem;justify-content:center}
+.wk-body{padding:.9rem 1rem}
+.wk-title{font-family:'Syne',sans-serif;font-size:.92rem;font-weight:800;margin-bottom:.3rem;color:var(--purple-deep)}
+.wk-desc{font-size:.87rem;color:var(--muted);line-height:1.6;font-weight:300}
+
+/* NUMBERS STRIP — purple bg */
+.numbers-strip{background:var(--purple-deep);color:var(--white);padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:none}
+.num-item{padding:1rem;border-right:1px solid var(--rule-purple)}
+.num-item:nth-child(even){border-right:none}
+.num-item:nth-child(n+3){border-top:1px solid var(--rule-purple)}
+.num-big{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,6vw,2.4rem);font-weight:800;line-height:1;margin-bottom:.3rem}
+.num-desc{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.5;font-weight:300}
+
+/* SPOTS BOX */
+.spots-box{border:2px solid var(--purple-deep);padding:1.4rem;margin-top:1.2rem}
+.spots-box h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;margin-bottom:.5rem;color:var(--purple-deep)}
+.spots-box p{font-size:.88rem;color:var(--muted);line-height:1.65;font-weight:300}
+
+/* PRICE GRID */
+.biz-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1.5px solid var(--purple-deep);background:var(--purple-deep);margin-top:1.1rem}
+.biz-p-card{background:var(--white);padding:1.4rem 1.2rem;border-right:1px solid var(--purple-deep)}
+.biz-p-card:last-child{border-right:none}
+.biz-p-card.featured{background:var(--purple-light)}
+.biz-p-tier{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.55rem;font-weight:600}
+.biz-p-amount{font-family:'Syne',sans-serif;font-size:1.65rem;font-weight:800;color:var(--purple-deep);line-height:1.05;margin-bottom:.2rem}
+.biz-p-unit{font-size:.73rem;color:var(--muted);margin-bottom:.75rem}
+.biz-p-detail{font-size:.78rem;line-height:1.6;color:var(--muted);border-top:1px solid var(--rule);padding-top:.65rem;font-weight:300}
+.biz-p-total{font-size:.7rem;color:var(--purple-mid);margin-top:.55rem;font-style:italic}
+
+/* GUARANTEE */
+.g-box{background:var(--purple-deep);color:var(--white);padding:1.6rem;margin-top:1.2rem}
+.g-box p{font-family:'Syne',sans-serif;font-size:.97rem;line-height:1.7;font-weight:600}
+
+/* LEAD MAGNET */
+.lm{border-left:3px solid var(--purple-mid);padding:1.2rem;background:var(--purple-light);margin-top:.4rem}
+.lm h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:.4rem;color:var(--purple-deep)}
+.lm p{font-size:.87rem;color:var(--muted);margin-bottom:.9rem;line-height:1.65;font-weight:300}
+.btn-purple{display:inline-block;background:var(--purple-deep);color:var(--white);text-decoration:none;padding:.7rem 1.4rem;font-size:.84rem;font-weight:600;letter-spacing:.04em;transition:opacity .15s}
+.btn-purple:hover{opacity:.85}
+
+/* FINAL CTA */
+.final-cta{background:var(--purple-deep);color:var(--white);padding:3rem 1.5rem;text-align:center}
+.final-cta h2{color:var(--white);text-align:center;margin-bottom:.7rem}
+.final-cta p{color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-size:.95rem;font-weight:300}
+
+/* FOOTER */
+footer{padding:1.8rem 1.5rem;text-align:center;font-size:.78rem;color:#aaa}
+footer a{color:#aaa;text-decoration:none}
+
+@media(max-width:480px){
+  .numbers-strip{grid-template-columns:1fr}
+  .num-item{border-right:none!important;border-top:1px solid var(--rule-purple)}
+  .num-item:first-child{border-top:none}
+  .biz-price-grid{grid-template-columns:1fr}
+  .biz-p-card{border-right:none;border-bottom:1px solid var(--purple-deep)}
+  .biz-p-card:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Marketing FM · Karl Mutua</span>
+  <a href="https://wa.me/254704334027?text=Hi%20Karl%2C%20I%20am%20interested%20in%20the%204%20Week%20Biz%20Pawa%20Up%20Challenge" class="nav-wa">WhatsApp Karl</a>
+</nav>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-spots">
+      <span class="spots-num">5</span>
+      <span class="spots-label">spots per group cohort</span>
+    </div>
+    <p class="hero-programme">4 Week Biz Pawa Up Challenge</p>
+    <h1>Your business is good. The customers should show it.</h1>
+    <p class="hero-promise">4 weeks. Karl builds a customer system inside your business with you. KSh 10,000 in new money in Month 1. KSh 25,000 by Month 2. The system stays and runs every month after Karl is gone.</p>
+    <div class="spots-callout">Group of 5 · KSh 5,000 per person &nbsp;|&nbsp; 1:1 · KSh 25,000</div>
+    <div class="btn-row">
+      <a href="https://wa.me/254704334027?text=Hi%20Karl%2C%20I%20want%20to%20book%20a%20spot%20in%20the%20Biz%20Pawa%20Up%20Challenge" class="btn-white">Book your spot — WhatsApp Karl</a>
+      <a href="https://docs.google.com/spreadsheets/d/1iR6tNQ67ZjlisHSFso9KMYOxmNEOoAlHR-cOj4cbGfA/copy" class="btn-ghost" target="_blank">Take the free audit first</a>
+    </div>
+  </div>
+
+  <section>
+    <p class="label">This works best for</p>
+    <div class="for-section-label">Business owners who want this ↓</div>
+    <ul class="for-list">
+      <li><span class="for-mark">+</span><span>Customers who find them — not the other way around every single month</span></li>
+      <li><span class="for-mark">+</span><span>To stop depending on referrals and personal connections for every new sale</span></li>
+      <li><span class="for-mark">+</span><span>To know exactly which part of their marketing is actually bringing in money</span></li>
+      <li><span class="for-mark">+</span><span>To predict next month's revenue without guessing</span></li>
+      <li><span class="for-mark">+</span><span>A business that keeps running even when they take a break from pushing</span></li>
+      <li><span class="for-mark">+</span><span>To stop feeling busy every day but not seeing the money to match</span></li>
+      <li><span class="for-mark">+</span><span>To grow past the same revenue ceiling they have been stuck at for months</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="label">What the challenge is</p>
+    <h2>Karl spends 4 weeks inside your business with you.</h2>
+    <p class="body-text">Every working day, 30 minutes with Karl. He finds exactly what is blocking your growth. Then he builds the system with you that fixes it. Not advice. Not a report. A working customer acquisition system built directly into your business — that you own permanently.</p>
+    <ul class="weeks">
+      <li>
+        <span class="wk-num">W1</span>
+        <div class="wk-body">
+          <div class="wk-title">Diagnose — See the business honestly</div>
+          <div class="wk-desc">Karl looks at everything. He names what is blocking your growth. You see your revenue ceiling clearly for the first time. Written down. Not a feeling anymore.</div>
+        </div>
+      </li>
+      <li>
+        <span class="wk-num">W2</span>
+        <div class="wk-body">
+          <div class="wk-title">Build — Install the system</div>
+          <div class="wk-desc">Karl builds the customer acquisition system with you. WhatsApp funnel. Offer engineering. Customer database. Past client reactivation. Your business gets infrastructure it has never had.</div>
+        </div>
+      </li>
+      <li>
+        <span class="wk-num">W3</span>
+        <div class="wk-body">
+          <div class="wk-title">Activate — Run it live</div>
+          <div class="wk-desc">The system goes live. You get your first sale generated by the system — not a referral, not a favour. A customer the system brought in.</div>
+        </div>
+      </li>
+      <li>
+        <span class="wk-num">W4</span>
+        <div class="wk-body">
+          <div class="wk-title">Systemise — Make it run without you</div>
+          <div class="wk-desc">The system runs on its own. Karl writes your Month 2 plan. You are done. The system keeps going every month after Karl leaves.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="numbers-strip">
+    <div class="num-item">
+      <div class="num-big">30 min</div>
+      <div class="num-desc">Daily call with Karl. Every working day. For 4 weeks.</div>
+    </div>
+    <div class="num-item">
+      <div class="num-big">KSh 10K</div>
+      <div class="num-desc">New money in Month 1 — during the challenge itself.</div>
+    </div>
+    <div class="num-item">
+      <div class="num-big">KSh 25K</div>
+      <div class="num-desc">New money by Month 2 — the system runs without Karl.</div>
+    </div>
+    <div class="num-item">
+      <div class="num-big">Forever</div>
+      <div class="num-desc">The system stays. No recurring fee. You own it completely.</div>
+    </div>
+  </div>
+
+  <section>
+    <p class="label">Limited spots</p>
+    <h2>This is not a webinar. It is not a group course.</h2>
+    <p class="body-text">Karl works with each person personally. Daily calls. Real answers. Spots are limited by design — so every person gets Karl's full attention.</p>
+    <div class="spots-box">
+      <h3>5 spots — Group cohort &nbsp;·&nbsp; 10 spots — 1:1 with Karl</h3>
+      <p>Once a cohort fills, the doors close. If you are reading this, spots are still open. Message Karl now to confirm yours. He will give you the start date and all the details before you commit a single shilling.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Price and guarantee</p>
+    <h2>Two ways in. Same 4 weeks. Same system.</h2>
+    <div class="biz-price-grid">
+      <div class="biz-p-card">
+        <div class="biz-p-tier">Group of 5 &nbsp;·&nbsp; 5 spots</div>
+        <div class="biz-p-amount">KSh 5,000</div>
+        <div class="biz-p-unit">per person</div>
+        <div class="biz-p-detail">5 business owners building together. Daily calls with Karl. Full WhatsApp access throughout. Same 4-week system — you build alongside people at the same stage as you.</div>
+        <div class="biz-p-total">Total programme cost: KSh 25,000</div>
+      </div>
+      <div class="biz-p-card featured">
+        <div class="biz-p-tier">1:1 with Karl &nbsp;·&nbsp; 10 spots</div>
+        <div class="biz-p-amount">KSh 25,000</div>
+        <div class="biz-p-unit">full price</div>
+        <div class="biz-p-detail">Just you and Karl. 28 daily personal calls. WhatsApp access throughout. Notion Business HQ workspace you keep permanently. Your Month 2 plan written by Karl.</div>
+        <div class="biz-p-total">Everything built for your business only.</div>
+      </div>
+    </div>
+    <div class="g-box">
+      <p>"Attend every daily call. Complete every weekly assignment. Execute every instruction. If you do all of that and you do not make KSh 10,000 in new money during the 4 weeks — Karl gives you every shilling back."</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Not sure if this is for your business yet?</p>
+    <h2>Take the Revenue Ceiling Audit first.</h2>
+    <p class="body-text" style="margin-bottom:.5rem">12 questions. 4 dimensions. 3 minutes. It shows you the exact thing that is blocking your growth right now — free.</p>
+    <div class="lm">
+      <h3>The Revenue Ceiling Audit — Free</h3>
+      <p>Answer 12 honest questions about your business. Find the dimension with the lowest score. That is your ceiling. Message Karl with the result and he will tell you what to do next.</p>
+      <a href="https://docs.google.com/spreadsheets/d/1iR6tNQ67ZjlisHSFso9KMYOxmNEOoAlHR-cOj4cbGfA/copy" class="btn-purple" target="_blank">Take the Revenue Ceiling Audit</a>
+    </div>
+  </section>
+
+  <div class="final-cta">
+    <h2>Ready to install the system?</h2>
+    <p>Message Karl on WhatsApp. Tell him you are interested. He will confirm if a spot is still open and give you everything you need before you pay anything.</p>
+    <a href="https://wa.me/254704334027?text=Hi%20Karl%2C%20I%20want%20to%20book%20my%20spot%20in%20the%204%20Week%20Biz%20Pawa%20Up%20Challenge" class="btn-white">Book your spot — WhatsApp Karl</a>
+  </div>
+
+</div>
+
+<footer>
+  Marketing FM &nbsp;·&nbsp; Karl Mutua &nbsp;·&nbsp;
+  <a href="https://wa.me/254704334027">+254 704 334 027</a>
+</footer>
+
+</body>
+</html>
